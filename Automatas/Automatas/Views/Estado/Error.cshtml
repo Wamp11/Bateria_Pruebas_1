@@ -1,0 +1,16 @@
+﻿﻿﻿@{
+    ViewBag.Title = "Error";
+}
+<h2>Error</h2>
+<p>Archivo subido erróneo, verifique el archivo subido y vuelva a intentar</p>
+<p>Recuerde que la entrada es un txt con el siguiente formato:</p>
+<p>1) cantidad de estados</p>
+<p>2) Estado inicial (naturalmente solo puede ser un estado inicial)</p>
+<p>3) Lista de estados finales (separados por coma)</p>
+<p>4-en adelante) lista con las transiciones con el formato "estado" + "coma" + "caracter con el que se hace la transicion" + "coma" + "Estado"</p>
+<br />
+<center>
+    <form method="post" action="@Url.Action("SubirDatos", "Estado")">
+        <button type="submit" id="llamarMetodoBtn" name="llamarMetodoBtn" class="botonplano">Volver</button>
+    </form>
+</center>
