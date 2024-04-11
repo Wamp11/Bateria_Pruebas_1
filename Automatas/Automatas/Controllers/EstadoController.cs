@@ -88,5 +88,19 @@ namespace Automatas.Controllers
                 return View("Error");
             }
         }
+        [HttpPost]
+        [Route("Verificar")]
+        public IActionResult comprobar(String entrada)
+        {
+            if (automata.entrada(entrada))
+            {
+                resultado = "aceptado";
+            }
+            else
+            {
+                resultado = "no aceptado";
+            }
+            return View("Comprobar", resultado);
+        }
     }
 }

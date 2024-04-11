@@ -7,5 +7,49 @@
         {
             inicial = dato;
         }
+        public bool entrada(string entrada)
+        {
+            return comprobar(entrada, inicial, 0);
+        }
+        private bool comprobar(string entrada, Estado actual, int inicio)
+        {
+            if (entrada.Length == 0)
+            {
+                if (actual.final)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            int indice = -1;
+            for (int i = 0; i < actual.alfabeto.Count(); i++)
+            {
+                if (actual.alfabeto[i] == Convert.ToString(entrada[inicio]))
+                {
+                    indice = i;
+                    break;
+                }
+            }
+            if (indice == -1)
+            {
+                return false;
+            }
+            actual = actual.transiciones[indice];
+            if (entrada.Length == (inicio + 1))
+            {
+                if (actual.final)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return comprobar(entrada, actual, (inicio + 1));
+        }
     }
 }
