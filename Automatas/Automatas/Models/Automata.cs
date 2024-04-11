@@ -2,7 +2,7 @@
 {
     public class Automata
     {
-        public Estado inicial;
+        public Estado inicial = null;
         public void Crear(Estado dato)
         {
             inicial = dato;
