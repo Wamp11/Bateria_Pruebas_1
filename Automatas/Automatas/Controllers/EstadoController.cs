@@ -7,6 +7,7 @@ namespace Automatas.Controllers
     public class EstadoController : Controller
     {
         public static string resultado = "";
+        public static string recorrido = "";
         public static Automata automata = new Automata();
         public static List<String> listaTexto = new List<String>();
         public IActionResult Index()
@@ -17,7 +18,8 @@ namespace Automatas.Controllers
         public IActionResult SubirDatos(IFormFile archivo)
         {
             resultado = "";
-            automata.inicial = null;
+            recorrido = "";
+            automata.borrar();
             if (archivo == null || archivo.Length == 0)
             {
                 ViewBag.Error = "Seleccione un archivo válido.";
@@ -66,21 +68,25 @@ namespace Automatas.Controllers
                 inicial = Convert.ToInt32(listaTexto[1]) - 1;
                 for (int i = 0; i < Convert.ToInt32(listaTexto[0]); i++)
                 {
-                    Estado nuevoEstado = new Estado(i+1);
+                    Estado nuevoEstado = new Estado(i + 1);
                     constructor.Add(nuevoEstado);
                 }
                 for (int i = 0; i < listaTexto[2].Split(",").Count(); i++)
                 {
-                    constructor[Convert.ToInt32(listaTexto[2].Split(",")[i])-1].final = true;
+                    constructor[Convert.ToInt32(listaTexto[2].Split(",")[i]) - 1].final = true;
                 }
                 for (int i = 3; i < Convert.ToInt32(listaTexto.Count()); i++)
                 {
-                    posicion = Convert.ToInt32(listaTexto[i].Split(",")[0]) - 1; 
+                    posicion = Convert.ToInt32(listaTexto[i].Split(",")[0]) - 1;
                     constructor[posicion].alfabeto.Add(listaTexto[i].Split(",")[1]);
-                    constructor[posicion].transiciones.Add(constructor[Convert.ToInt32(listaTexto[i].Split(",")[2])-1]);
+                    constructor[posicion].transiciones.Add(constructor[Convert.ToInt32(listaTexto[i].Split(",")[2]) - 1]);
                 }
                 automata.Crear(constructor[inicial]);
-                return View("Comprobar", resultado);
+                List<String> salidas = new List<String>();
+                salidas.Add("True");
+                salidas.Add(resultado);
+                salidas.Add(recorrido);
+                return View("Comprobar", salidas);
             }
             catch (Exception ex)
             {
@@ -92,6 +98,9 @@ namespace Automatas.Controllers
         [Route("Verificar")]
         public IActionResult comprobar(String entrada)
         {
+            List<String> salidas = new List<String>();
+            recorrido = "";
+            resultado = "";
             if (automata.entrada(entrada))
             {
                 resultado = "aceptado";
@@ -100,7 +109,19 @@ namespace Automatas.Controllers
             {
                 resultado = "no aceptado";
             }
-            return View("Comprobar", resultado);
+            recorrido = automata.recorrer(entrada, recorrido);
+            if (recorrido.Contains("desconocido"))
+            {
+                recorrido = recorrido.Substring(0, (recorrido.Length - 13));
+                salidas.Add("False");
+            }
+            else
+            {
+                salidas.Add("True");
+            }
+            salidas.Add(resultado);
+            salidas.Add(recorrido);
+            return View("Comprobar", salidas);
         }
     }
 }
