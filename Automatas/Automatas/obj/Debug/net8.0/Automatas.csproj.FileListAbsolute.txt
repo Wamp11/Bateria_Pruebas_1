@@ -90,3 +90,34 @@ C:\Users\izeac\OneDrive\Escritorio\Nueva carpeta (2)\Bateria_Pruebas_1\Automatas
 C:\Users\izeac\OneDrive\Escritorio\Nueva carpeta (2)\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.pdb
 C:\Users\izeac\OneDrive\Escritorio\Nueva carpeta (2)\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.genruntimeconfig.cache
 C:\Users\izeac\OneDrive\Escritorio\Nueva carpeta (2)\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\ref\Automatas.dll
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\bin\Debug\net8.0\appsettings.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\bin\Debug\net8.0\Automatas.staticwebassets.runtime.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\bin\Debug\net8.0\Automatas.exe
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\bin\Debug\net8.0\Automatas.deps.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\bin\Debug\net8.0\Automatas.runtimeconfig.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\bin\Debug\net8.0\Automatas.dll
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\bin\Debug\net8.0\Automatas.pdb
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.AssemblyInfoInputs.cache
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.AssemblyInfo.cs
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.csproj.CoreCompileInputs.cache
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.RazorAssemblyInfo.cache
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.RazorAssemblyInfo.cs
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.sourcelink.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\staticwebassets\msbuild.Automatas.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\staticwebassets\msbuild.build.Automatas.props
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Automatas.props
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Automatas.props
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\scopedcss\bundle\Automatas.styles.css
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\scopedcss\projectbundle\Automatas.bundle.scp.css
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.dll
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\refint\Automatas.dll
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.pdb
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\Automatas.genruntimeconfig.cache
+C:\Users\izeac\OneDrive\Escritorio\URL\Proyecto lenguajes\Bateria_Pruebas_1\Automatas\Automatas\obj\Debug\net8.0\ref\Automatas.dll

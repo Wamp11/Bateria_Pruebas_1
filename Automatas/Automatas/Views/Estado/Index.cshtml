@@ -1,10 +1,16 @@
-﻿﻿<center><h1>Proyecto Fase 2</h1></center>
+﻿﻿<center><h1>Proyecto Fase 4</h1></center>
 <br />
 <center><p>La propuesta para la solución del proyecto es: </p></center>
-<center><p>Primero leemos la entrada del txt, luego, haciendo uso de las clases creadas de estado y automata, construimos el automata, luego mediante de la entrada del usuario, se hace un recorrido de la estructura automata y si este está en un estado final, se devuelve que la cadena es aceptada, de lo contrario, se devuelve que la cadena es rechazada</p></center>
+<center><p>Primero leemos la entrada del txt, luego, haciendo uso de las clases creadas de estadoN y automataN, construimos el automata, luego mediante de la entrada del usuario, se hace un recorrido de la estructura automata y si este está en un estado final, se devuelve que la cadena es aceptada, de lo contrario, se devuelve que la cadena es rechazada</p></center>
 <br />
 <center>
     <form method="post" action="@Url.Action("subirDatos", "Estado")">
-        <button type="submit" id="llamarMetodoBtn1" name="llamarMetodoBtn1" class="botonplano">Iniciar</button>
+        <button type="submit" id="llamarMetodoBtn1" name="llamarMetodoBtn1" class="botonplano">Determinista</button>
+    </form>
+</center>
+<br />
+<center>
+    <form method="post" action="@Url.Action("subirDatos2", "Estado")">
+        <button type="submit" id="llamarMetodoBtn1" name="llamarMetodoBtn1" class="botonplano">No determinista</button>
     </form>
 </center>
