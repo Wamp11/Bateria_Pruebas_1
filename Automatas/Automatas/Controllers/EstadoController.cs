@@ -62,26 +62,8 @@ namespace Automatas.Controllers
                 {
                     return View("Error");
                 }
-                List<Estado> constructor = new List<Estado>();
-                int inicial;
-                int posicion;
-                inicial = Convert.ToInt32(listaTexto[1]) - 1;
-                for (int i = 0; i < Convert.ToInt32(listaTexto[0]); i++)
-                {
-                    Estado nuevoEstado = new Estado(i + 1);
-                    constructor.Add(nuevoEstado);
-                }
-                for (int i = 0; i < listaTexto[2].Split(",").Count(); i++)
-                {
-                    constructor[Convert.ToInt32(listaTexto[2].Split(",")[i]) - 1].final = true;
-                }
-                for (int i = 3; i < Convert.ToInt32(listaTexto.Count()); i++)
-                {
-                    posicion = Convert.ToInt32(listaTexto[i].Split(",")[0]) - 1;
-                    constructor[posicion].alfabeto.Add(listaTexto[i].Split(",")[1]);
-                    constructor[posicion].transiciones.Add(constructor[Convert.ToInt32(listaTexto[i].Split(",")[2]) - 1]);
-                }
-                automata.Crear(constructor[inicial]);
+                automata.Crear(listaTexto);
+                listaTexto.Clear();
                 List<String> salidas = new List<String>();
                 salidas.Add("True");
                 salidas.Add(resultado);
