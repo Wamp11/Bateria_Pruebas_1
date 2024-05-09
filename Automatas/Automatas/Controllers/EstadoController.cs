@@ -168,12 +168,12 @@ namespace Automatas.Controllers
                 return View("Error2");
             }
         }
-        /*public IActionResult comprobar2(String entrada)
+        public IActionResult comprobar2(String entrada)
         {
             List<String> salidas = new List<String>();
             recorrido = "";
             resultado = "";
-            if (automata.entrada(entrada))
+            if (automataN.entrada(entrada))
             {
                 resultado = "aceptado";
             }
@@ -181,7 +181,7 @@ namespace Automatas.Controllers
             {
                 resultado = "no aceptado";
             }
-            recorrido = automata.recorrer(entrada, recorrido);
+            /*recorrido = automata.recorrer(entrada, recorrido);
             if (recorrido.Contains("desconocido"))
             {
                 recorrido = recorrido.Substring(0, (recorrido.Length - 13));
@@ -190,10 +190,10 @@ namespace Automatas.Controllers
             else
             {
                 salidas.Add("True");
-            }
+            }*/
             salidas.Add(resultado);
-            salidas.Add(recorrido);
+            salidas.Add("");
             return View("Comprobar2", salidas);
-        }*/
+        }
     }
 }
