@@ -1,0 +1,41 @@
+﻿@model List<String>
+@{
+    ViewBag.Title = "Subir";
+}
+<center><h2>Autómata creado</h2></center>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+<br />
+<center>
+    <div>
+        <form method="post" action="@Url.Action("comprobar2", "Estado")">
+            <input type="text" id="entrada" name="entrada" placeholder="Escriba su texto aquí" />
+            <input type="hidden" id="hiddenentrada" name="entrada" value="" />
+            <button type="submit" id="llamarMetodoBtn" name="llamarMetodoBtn">Comprobar</button>
+            <br />
+            <p>Resultado: @Model[1]</p>
+            <p>Recorrido: @Model[2]</p>
+            @if (Model[0] == "False")
+            {
+                <p>Hasta este punto se pudo recorrer antes de que se encontrara un caracter inexistente en el alfabeto reconocible por el autómata</p>
+            }
+        </form>
+    </div>
+</center>
+<br />
+<center>
+    <form method="post" action="@Url.Action("SubirDatos2", "Estado")">
+        <button type="submit" id="llamarMetodo" name="llamarMetodo" class="botonplano">Volver</button>
+    </form>
+</center>
+<br />
+<script>
+    $(document).ready(function () {
+        $('#llamarMetodoBtn').click(function () {
+            $('#hiddenentrada').val($('#entrada').val());
+        });
+    });
+</script>

@@ -9,6 +9,7 @@ namespace Automatas.Controllers
         public static string resultado = "";
         public static string recorrido = "";
         public static Automata automata = new Automata();
+        public static AutomataN automataN = new AutomataN();
         public static List<String> listaTexto = new List<String>();
         public IActionResult Index()
         {
@@ -110,7 +111,7 @@ namespace Automatas.Controllers
         {
             resultado = "";
             recorrido = "";
-            //automata.borrar();
+            automataN.borrar();
             if (archivo == null || archivo.Length == 0)
             {
                 ViewBag.Error = "Seleccione un archivo válido.";
@@ -143,5 +144,56 @@ namespace Automatas.Controllers
                 return View("Error2");
             }
         }
+        [HttpPost]
+        [Route("auto2")]
+        public IActionResult construir2()
+        {
+            try
+            {
+                if (listaTexto.Count() == 0)
+                {
+                    return View("Error2");
+                }
+                automataN.Crear(listaTexto);
+                listaTexto.Clear();
+                List<String> salidas = new List<String>();
+                salidas.Add("True");
+                salidas.Add(resultado);
+                salidas.Add(recorrido);
+                return View("Comprobar2", salidas);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Ocurrió un error al procesar el archivo: " + ex.Message;
+                return View("Error2");
+            }
+        }
+        /*public IActionResult comprobar2(String entrada)
+        {
+            List<String> salidas = new List<String>();
+            recorrido = "";
+            resultado = "";
+            if (automata.entrada(entrada))
+            {
+                resultado = "aceptado";
+            }
+            else
+            {
+                resultado = "no aceptado";
+            }
+            recorrido = automata.recorrer(entrada, recorrido);
+            if (recorrido.Contains("desconocido"))
+            {
+                recorrido = recorrido.Substring(0, (recorrido.Length - 13));
+                salidas.Add("False");
+            }
+            else
+            {
+                salidas.Add("True");
+            }
+            salidas.Add(resultado);
+            salidas.Add(recorrido);
+            return View("Comprobar2", salidas);
+        }*/
     }
 }
