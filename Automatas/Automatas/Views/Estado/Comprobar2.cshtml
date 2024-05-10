@@ -17,10 +17,13 @@
             <button type="submit" id="llamarMetodoBtn" name="llamarMetodoBtn">Comprobar</button>
             <br />
             <p>Resultado: @Model[1]</p>
-            <p>Recorrido: @Model[2]</p>
             @if (Model[0] == "False")
             {
-                <p>Hasta este punto se pudo recorrer antes de que se encontrara un caracter inexistente en el alfabeto reconocible por el autómata</p>
+                <p>Al haber sido rechazado, no hay recorrido</p>
+            }
+            else
+            {
+                <p>Recorrido: @Model[2]</p>
             }
         </form>
     </div>

@@ -176,12 +176,15 @@ namespace Automatas.Controllers
             if (automataN.entrada(entrada))
             {
                 resultado = "aceptado";
+                salidas.Add("True");
             }
             else
             {
                 resultado = "no aceptado";
+                salidas.Add("False");
             }
-            /*recorrido = automata.recorrer(entrada, recorrido);
+            /*
+            recorrido = automata.recorrer(entrada, recorrido);
             if (recorrido.Contains("desconocido"))
             {
                 recorrido = recorrido.Substring(0, (recorrido.Length - 13));
@@ -192,7 +195,7 @@ namespace Automatas.Controllers
                 salidas.Add("True");
             }*/
             salidas.Add(resultado);
-            salidas.Add("");
+            salidas.Add("XD");
             return View("Comprobar2", salidas);
         }
     }
