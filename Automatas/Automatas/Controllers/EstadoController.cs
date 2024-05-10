@@ -173,6 +173,10 @@ namespace Automatas.Controllers
             List<String> salidas = new List<String>();
             recorrido = "";
             resultado = "";
+            if (entrada == null)
+            {
+                entrada = "";
+            }
             if (automataN.entrada(entrada))
             {
                 resultado = "aceptado";

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Automatas.Models
 {
@@ -45,13 +46,14 @@ namespace Automatas.Models
         {
             HashSet<EstadoN> actual = new HashSet<EstadoN> { ini };
             int inicio = 0;
+            int longitud = entrada.Length;
 
             while (true)
             {
                 if (actual.Count == 0)
                     return false;
 
-                if (entrada.Length == inicio)
+                if (inicio >= longitud)
                 {
                     // Comprobar si algún estado en el conjunto actual es final
                     foreach (var estado in actual)
@@ -65,23 +67,35 @@ namespace Automatas.Models
                 }
 
                 HashSet<EstadoN> siguiente = new HashSet<EstadoN>();
+                bool transicionEncontrada = false;
 
                 foreach (var estado in actual)
                 {
                     for (int i = 0; i < estado.alfabeto.Count; i++)
                     {
-                        if (entrada.Length > inicio && estado.alfabeto[i] == Convert.ToString(entrada[inicio]))
+                        string simbolo = estado.alfabeto[i];
+                        int simboloLongitud = simbolo.Length;
+
+                        if (inicio + simboloLongitud <= longitud && entrada.Substring(inicio, simboloLongitud) == simbolo)
                         {
                             foreach (var transicion in estado.transiciones[i])
                             {
                                 siguiente.Add(transicion);
                             }
+
+                            transicionEncontrada = true; // Se encontró al menos una transición válida
                         }
                     }
                 }
 
+                // Si no se encontró ninguna transición válida para el símbolo actual, la entrada no es válida
+                if (!transicionEncontrada)
+                {
+                    return false;
+                }
+
                 actual = siguiente;
-                inicio++;
+                inicio += 1; // Avanzar al siguiente carácter de la entrada
             }
         }
     }
