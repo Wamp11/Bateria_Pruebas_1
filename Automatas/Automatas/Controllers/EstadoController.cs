@@ -183,7 +183,6 @@ namespace Automatas.Controllers
             {
                 if (caminos[i].Contains("Si"))
                 {
-                    recorrido = caminos[i].Substring(0, (caminos[i].Length) - 2);
                     resultado = "aceptado";
                     loAcepta = true;
                     break;
@@ -192,6 +191,10 @@ namespace Automatas.Controllers
                 {
                     resultado = "No aceptado";
                 }
+            }
+            for (int i = 0; i < caminos.Count; i++)
+            {
+                recorrido += caminos[i].Substring(0, (caminos[i].Length)) + " ";
             }
             if (loAcepta)
             {
