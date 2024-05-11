@@ -9,7 +9,7 @@ namespace Automatas.Controllers
         public static string resultado = "";
         public static string recorrido = "";
         public static Automata automata = new Automata();
-        public static AutomataN automataN = new AutomataN();
+        public static AutomataN automataN;
         public static List<String> listaTexto = new List<String>();
         public IActionResult Index()
         {
@@ -111,7 +111,7 @@ namespace Automatas.Controllers
         {
             resultado = "";
             recorrido = "";
-            automataN.borrar();
+            //automataN.borrar();
             if (archivo == null || archivo.Length == 0)
             {
                 ViewBag.Error = "Seleccione un archivo válido.";
@@ -154,7 +154,7 @@ namespace Automatas.Controllers
                 {
                     return View("Error2");
                 }
-                automataN.Crear(listaTexto);
+                automataN = new AutomataN(listaTexto);
                 listaTexto.Clear();
                 List<String> salidas = new List<String>();
                 salidas.Add("True");
@@ -173,33 +173,36 @@ namespace Automatas.Controllers
             List<String> salidas = new List<String>();
             recorrido = "";
             resultado = "";
+            bool loAcepta = false;
             if (entrada == null)
             {
                 entrada = "";
             }
-            if (automataN.entrada(entrada))
+            List<string> caminos = automataN.Comprobar(entrada);
+            for (int i = 0; i < caminos.Count; i++)
             {
-                resultado = "aceptado";
+                if (caminos[i].Contains("Si"))
+                {
+                    recorrido = caminos[i].Substring(0, (caminos[i].Length) - 2);
+                    resultado = "aceptado";
+                    loAcepta = true;
+                    break;
+                }
+                else
+                {
+                    resultado = "No aceptado";
+                }
+            }
+            if (loAcepta)
+            {
                 salidas.Add("True");
             }
             else
             {
-                resultado = "no aceptado";
                 salidas.Add("False");
             }
-            /*
-            recorrido = automata.recorrer(entrada, recorrido);
-            if (recorrido.Contains("desconocido"))
-            {
-                recorrido = recorrido.Substring(0, (recorrido.Length - 13));
-                salidas.Add("False");
-            }
-            else
-            {
-                salidas.Add("True");
-            }*/
             salidas.Add(resultado);
-            salidas.Add("XD");
+            salidas.Add(recorrido);
             return View("Comprobar2", salidas);
         }
     }

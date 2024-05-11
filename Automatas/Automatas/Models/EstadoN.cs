@@ -2,16 +2,14 @@
 {
     public class EstadoN
     {
-        public EstadoN(int dato)
+        public EstadoN(string dato, List<Transition> trans, bool final)
         {
             nombre = dato;
-            final = false;
-            alfabeto = new List<String>();
-            transiciones = new List<List<EstadoN>>();
+            final = final;
+            transiciones = trans;
         }
-        public int nombre { get; set; }
+        public string nombre { get; set; }
         public bool final { get; set; }
-        public List<String> alfabeto { get; set; }
-        public List<List<EstadoN>> transiciones { get; set; }
+        public List<Transition> transiciones;
     }
 }
